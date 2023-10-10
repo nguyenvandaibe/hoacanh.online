@@ -10,11 +10,11 @@
                 @csrf
 
                 <div class="mb-3">
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                        name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
-                        placeholder="Nhập chỉ email">
+                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror"
+                        name="username" value="{{ old('username') }}" required autocomplete="username" autofocus
+                        placeholder="Nhập tên đăng nhập">
 
-                    @error('email')
+                    @error('username')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>

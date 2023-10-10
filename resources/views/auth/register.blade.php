@@ -21,6 +21,17 @@
                 </div>
 
                 <div class="mb-3">
+                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username"
+                        value="{{ old('username') }}" required autocomplete="name" autofocus placeholder="Tên đăng nhập">
+
+                    @error('username')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+
+                <div class="mb-3">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                         name="email" value="{{ old('email') }}" required autocomplete="email"
                         placeholder="Địa chỉ email">
